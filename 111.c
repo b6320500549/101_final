@@ -1,16 +1,18 @@
 #include<stdio.h>
 int main()
 {
-     int n,c,k;
+     int n,c,k,j,i=1;
      scanf("%d %d",&n,&c);
-     if(n>0&&n<32750)
+     if((n>0&&n<32750)&&c>0)
      {
-         k=n%10;
-         n/=10;
-         n*=10;
+         for(j=c;j>0;j/=10)
+            i*=10;
+         k=n%i;
+         n/=i;
+         n*=i;
          k=k+c;
-         k/=10;
-         k*=10;
+         k/=i;
+         k*=i;
          printf("%d",n+c+k);
      }
      return 0;
