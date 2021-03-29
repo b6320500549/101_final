@@ -47,9 +47,9 @@ int main()
         }
         for(i=0; i<=g; i++)
         {
+            if(max[i]>=1&&max[i]<=10000)
             printf("%d ",max[i]);
         }
     }
-
     return 0;
 }
